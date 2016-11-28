@@ -36,22 +36,20 @@
   </nav>
   <form>
     <div class="row">
-    <div class="small-12 medium-12 columns center">
+      <div class="small-12 medium-12 columns center">
         <h1>Calculadora</h1>
-        <input type="text" name="Valor Financiado" placeholder="Valor Financiado" class="small-12 medium-5 columns">
-        <input type="text" name="Valor de Entrada" placeholder="Valor de Entrada" class="small-12 medium-5 columns">
-        <input type="text" name="Nº de Prestações" placeholder="Nº de Prestações" class="small-12 medium-5 columns">
-        <input type="date" name="Data de Vencimento" placeholder="Taxa de Juros" class="small-12 medium-5 columns">
-        
-        <select>
-        <option>Periodo de Juros</option>
+        <input type="number" name="Valor do Empréstimo (P)" placeholder="Valor Empréstimo" class="small-12 medium-5 columns">
+        <input type="number" name="Periodo" placeholder="Periodo (N)" class="small-12 medium-5 columns">
+
+        <input type="number" name="Valor da taxa" placeholder="Valor da Taxa(a.m) %" class="small-12 medium-5 columns">
+        <select name="periodo">
+          <option>Periodo de Juros</option>
           <option>Mensal</option>
           <option>Anual</option>
         </select>
-
-        
-        <select>
-        <option>Sistema</option>
+        <input type="number" name="Nº de Parcela" placeholder="Nº de Parcela" class="small-12 medium-5 columns">
+        <select name="Sistema">
+          <option>Sistema</option>
           <option>Price</option>
           <option>SAC</option>
         </select>
@@ -64,9 +62,27 @@
     </dir>
   </form>
 
+  <div id="resultado" class="row">
+    <div class="small-12 medium-12 columns">
+      <h3>Resultados</h3>
+
+      <label><b>Valor da Parcela: </b><span id="">34</span></label>
+      <label><b>Saldo Devedor T: </b><span id="">34</span></label>
+      <label><b>Saldo Devedor T-1: </b><span id="">34</span></label>
+      <label><b>Juros de Ordem T: </b><span id="">34</span></label>
+      <label><b>Valor da Amortização de Ordem T: </b><span id="">34</span></label>
+      <label><b>Valor das Amortizações acumuladas até o periodo T: </b><span id="">34</span></label>
+      <label><b>Amortização entre o periodo T e T+K: </b><span id="">34</span></label>
+      <label><b>Juros Acumulado até o periodo T: </b><span id="">34</span></label>
+      <label><b>Juros acumulado entre o periodo T e T + K: </b><span id="">34</span></label>
+    </div>
+  </div>
+
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
+  <script src="js/price.js"></script>
+  <script src="js/sac.js"></script>
   <script>
     $(document).foundation();
   </script>
