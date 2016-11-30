@@ -13,7 +13,7 @@ $('#calcular').click(function (e) {
 	periodo = $('#periodo').val();
 	periodok = $('#periodok').val();
 	calcular(oper);
-	
+
 	function valorK()
 	{
 		return parseFloat(parseFloat(periodok)-parseFloat(periodo));
@@ -38,67 +38,67 @@ $('#calcular').click(function (e) {
 	function ValorA()
 	{
 		var res = parseFloat(ValorP()/ValorN());
-		$('#SACvaloramortizacao').val(res.toFixed(2));
+		$('#SACvaloramortizacao').html(res.toFixed(2));
 		return res;
 	}
 	function SaldoDevedorT()
 	{
 		var res = parseFloat((ValorN()-ValorT())*ValorA());
-		$('#SACsaldodevedort').val(res.toFixed(2));
+		$('#SACsaldodevedort').html(res.toFixed(2));
 		return res;	
 	}
 	function SaldoDevedorTum()
 	{
 		var res = parseFloat(ValorA()*((ValorN()-ValorT())+1));
-		$('#SACsaldodevedortum').val(res.toFixed(2));
+		$('#SACsaldodevedortum').html(res.toFixed(2));
 		return res;	
 	}
 	function ValorDoJuros()
 	{
 		var res = parseFloat(ValorI()*SaldoDevedorTum());
-		$('#SACparcelajurosordemt').val(res.toFixed(2));
+		$('#SACparcelajurosordemt').html(res.toFixed(2));
 		return res;
 	}
 	function ValorPrestacaoOrdemT()
 	{
 		var res = parseFloat(ValorA()*((ValorI()*((ValorN()-ValorT())+1))+1));
-		$('#SACprestacaoordemt').val(res.toFixed(2));
+		$('#SACprestacaoordemt').html(res.toFixed(2));
 		return res;		
 	}
 	function SomaAmortizacoesTK()
 	{
 		var res = parseFloat(valorK()*ValorA());
-		$('#SACamortizacaotk').val(res.toFixed(2));
+		$('#SACamortizacaotk').html(res.toFixed(2));
 		return res;
 	}
 	function JurosAcumuladoEmT()
 	{	
 		var res = parseFloat((((((2*ValorN())-ValorT())+1)/2)*ValorT())*(ValorI()*ValorA()));
-		$('#SACsomajurost').val(res.toFixed(2));
+		$('#SACsomajurost').html(res.toFixed(2));
 		return res;	
 	}
 	function JurosTK()
 	{
 		var res = parseFloat(((valorK()*((ValorN()-ValorT())-((valorK()-1)/2)))*ValorA())*ValorI());
-		$('#SACsomajurostk').val(res.toFixed(2));
+		$('#SACsomajurostk').html(res.toFixed(2));
 		return res;
 	}
 	function SomaPrestacoesA()
 	{	
 		var res = parseFloat(ValorA()*(ValorT()*((ValorI()*((((2*ValorN())-ValorT())+1)/2))+1)));
-		$('#SACsomaprestacaoa').val(res.toFixed(2));
+		$('#SACsomaprestacaoa').html(res.toFixed(2));
 		return res;
 	}
 	function SomaPrestacoesTK()
 	{
 		var res = parseFloat(ValorA()*(valorK()*((ValorI()*((ValorN()-ValorT())-((valorK()-1)/2)))+1)));
-		$('#SACsomaprestacaotk').val(res.toFixed(2));
+		$('#SACsomaprestacaotk').html(res.toFixed(2));
 		return res;
 	}
 	function Decrescimo()
 	{
 		var res = parseFloat(ValorI()*ValorA());
-		$('#SACdecrescimo').val(res.toFixed(2));
+		$('#SACdecrescimo').html(res.toFixed(2));
 		return res;	
 	}
 	function calcular(oper) 

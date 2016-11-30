@@ -3,35 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundation | Welcome</title>
+  <title>Matematiquinha</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
-  <!-- <nav class="top-bar" data-topbar role="navigation">
+  <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
         <h1><a href="#">Calculadora Financeira</a></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
-
     <section class="top-bar-section">
       <ul class="right">
-        <li class=""><a href="#">Calculadora 1</a></li>
-        <li class=""><a href="#">Calculadora 2</a></li>
-        <li class=""><a href="#">Calculadora 3</a></li>
-        <li class="has-dropdown">
-          <a href="#">Dropdown</a>
-          <ul class="dropdown">
-            <li><a href="#">First link in dropdown</a></li>
-            <li class="active"><a href="#">Active link in dropdown</a></li>
-          </ul>
-        </li>
+        <li class=""><a href="#">Sobre</a></li>
       </ul>
     </section>
-  </nav> -->
+  </nav>
   <form name="calcform" >
     <div class="row">
       <div class="small-12 medium-12 columns center">
@@ -56,86 +46,61 @@
   </div>
   <dir class="row">
     <div class="small-12">
-    <input type="button" id="calcular" name="calcular" value="Calcular" class="button">
-    <input type="reset" value="Reset" class="button">
+      <input type="button" id="calcular" name="calcular" value="Calcular" class="button">
+      <input type="reset" value="Reset" class="button">
     </div>
   </dir>
+</form>
 
-  <div>
-  <label for="res">Valor da Parcela :</label>
-  <input type="text" name="PRICEvalorparcela" id="PRICEvalorparcela" />
-  <label for="res">Saldo Devedor de Ordem T :</label>
-  <input type="text" name="PRICEsaldodevedort" id="PRICEsaldodevedort" /> 
-  <label for="res">Saldo Devedor de Ordem T - 1 :</label>
-  <input type="text" name="PRICEsaldodevedort1" id="PRICEsaldodevedort1" />         
-  <label for="res">Juros de ordem T :</label>
-  <input type="text" name="PRICEjurosordemt" id="PRICEjurosordemt" /> 
-  <label for="res">Valor da primeira amortização :</label>
-  <input type="text" name="PRICEprimeiraamortizacao" id="PRICEprimeiraamortizacao" />   
-  <label for="res">Valor da amortização de ordem T :</label>
-  <input type="text" name="PRICEamortizacaot" id="PRICEamortizacaot" />         
-  <label for="res">Valor das amortizações acumuladas até o periodo T :</label>
-  <input type="text" name="PRICEamortizacaott" id="PRICEamortizacaott" /> 
-  <label for="res">Amortização entre o periodo T e T+K :</label>
-  <input type="text" name="PRICEamortizacaott2" id="PRICEamortizacaott2" />
-  <label for="res">Juros acumulado até o periodo T :</label>
-  <input type="text" name="PRICEjurosacum" id="PRICEjurosacum" />
-  <label for="res">Juros acumulado entre o periodo T e T+K  :</label>
-  <input type="text" name="PRICEjurosacum2" id="PRICEjurosacum2" />       
+<div id="resultadoSac" class="row">
+  <div class="small-12 medium-12 columns">
+  <h2>Price</h2>
+  <hr>
+    <h3>Resultados Price</h3>
+    <label><b>Valor da Parcela :</b><br><span id="PRICEvalorparcela">34</span></label>
+    <label><b>Saldo Devedor de Ordem T :</b><br><span id="PRICEsaldodevedort">34</span></label>
+    <label><b>Saldo Devedor de Ordem T - 1 :</b><br><span id="PRICEsaldodevedort1">34</span></label>
+    <label><b>Juros de ordem T :</b><br><span id="PRICEjurosordemt">34</span></label>
+    <label><b>Valor da primeira amortização :</b><br><span id="PRICEprimeiraamortizacao">34</span></label>
+    <label><b>Valor da amortização de ordem T :</b><br><span id="PRICEamortizacaot">34</span></label>
+    <label><b>Valor das amortizações acumuladas até o periodo T :</b><br><span id="PRICEamortizacaott">34</span></label>
+    <label><b>Amortização entre o periodo T e T+K :</b><br><span id="PRICEamortizacaott2">34</span></label>
+    <label><b>Juros acumulado até o periodo T :</b><br><span id="PRICEjurosacum">34</span></label>
+    <label><b>Juros acumulado entre o periodo T e T+K  :</b><br><span id="PRICEjurosacum2">34</span></label>
+  </div>
 </div>
 
 
-<h2>SAccc</h2>
-<hr>
+  
 
-<div>
-        <label for="res">Valor da Amortização :</label>
-        <input type="text" name="SACvaloramortizacao" id="SACvaloramortizacao" />
-        <label for="res">Valor Saldo Devedor De Ordem T :</label>
-        <input type="text" name="SACsaldodevedort" id="SACsaldodevedort" />
-        <label for="res">Valor Saldo Devedor De Ordem T - 1:</label>
-        <input type="text" name="SACsaldodevedortum" id="SACsaldodevedortum" />
-        <label for="res">Valor Da Parcela De Juros de Ordem T :</label>
-        <input type="text" name="SACparcelajurosordemt" id="SACparcelajurosordemt" />       
-        <label for="res">Valor Da Prestação De Ordem T :</label>
-        <input type="text" name="SACprestacaoordemt" id="SACprestacaoordemt" /> 
-        <label for="res">Soma Das Amortizações De Ordem T + K :</label>
-        <input type="text" name="SACamortizacaotk" id="SACamortizacaotk" /> 
-        <label for="res">Soma Dos Juros De Ordem T :</label>
-        <input type="text" name="SACsomajurost" id="SACsomajurost" />         
-        <label for="res">Soma Dos Juros De Ordem T+K :</label>
-        <input type="text" name="SACsomajurostk" id="SACsomajurostk" /> 
-        <label for="res">Soma Das Prestações Acumuladas De Ordem T:</label>
-        <input type="text" name="SACsomaprestacaoa" id="SACsomaprestacaoa" /> 
-        <label for="res">Soma Das Prestações De Ordem T+K:</label>
-        <input type="text" name="SACsomaprestacaotk" id="SACsomaprestacaotk" />   
-        <label for="res">Decréscimo Nas Prestações:</label>
-        <input type="text" name="SACdecrescimo" id="SACdecrescimo" /> 
-    </div>
-</form>
-
-<div id="resultado" class="row">
+<div id="resultadoPRICE" class="row">
   <div class="small-12 medium-12 columns">
-    <h3>Resultados</h3>
-    <label><b>Valor da Parcela :</b><span id="vParcela">34</span></label>
-    <label><b>Saldo Devedor de Ordem T : </b><span id="vSaldoDevedorT">34</span></label>
-    <label><b>Saldo Devedor de Ordem T - 1 : </b><span id="vSaldoDevedorT1">34</span></label>
-    <label><b>Juros de ordem T : </b><span id="vJurosT">34</span></label>
-    <label><b>Valor da primeira amortização: </b><span id="vPrimeiraAmortizacao">34</span></label>
-    <label><b>Valor da amortização de ordem T: </b><span id="vAmortizacaoOrdemT">34</span></label>
-    <label><b>Valor das amortizações acumuladas até o periodo T : </b><span id="vAmortizacaoAcumuladaPeriodoT">34</span></label>
-    <label><b>Amortização entre o periodo T e T+K : </b><span id="vAmortizacaoPeriodoTeTK">34</span></label>
-    <label><b>Juros acumulado até o periodo T: </b><span id="vJurosAcumuladoAtePeriodoT">34</span></label>
-    <label><b>Juros acumulado entre o periodo T e T+K: </b><span id="vJurosAcumuladoPeriodoTeTK">34</span></label>
+  <h2>SAccc</h2>
+  <hr>
+    <h3>Resultados SAC</h3>
+    <label><b>Valor da Amortização :</b><br><span id="SACvaloramortizacao">34</span></label>
+    <label><b>Valor Saldo Devedor De Ordem T :</b><br><span id="SACsaldodevedort">34</span></label>
+    <label><b>Valor Saldo Devedor De Ordem T - 1:</b><br><span id="SACsaldodevedortum">34</span></label>
+    <label><b>Valor Da Parcela De Juros de Ordem T :</b><br><span id="SACparcelajurosordemt">34</span></label>
+    <label><b>Valor Da Prestação De Ordem T :</b><br><span id="SACprestacaoordemt">34</span></label>
+    <label><b>Soma Das Amortizações De Ordem T + K :</b><br><span id="SACamortizacaotk">34</span></label>
+    <label><b>Soma Dos Juros De Ordem T :</b><br><span id="SACsomajurost">34</span></label>
+    <label><b>Soma Dos Juros De Ordem T+K :</b><br><span id="SACsomajurostk">34</span></label>
+    <label><b>Soma Das Prestações Acumuladas De Ordem T:</b><br><span id="SACsomaprestacaoa">34</span></label>
+    <label><b>Soma Das Prestações De Ordem T+K:</b><br><span id="SACsomaprestacaotk">34</span></label>
+    <label><b>Decréscimo Nas Prestações:</b><br><span id="SACdecrescimo">34</span></label>
   </div>
 </div>
 
 
 
+
+
+
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
-  <script src="js/price.js"></script>
-  <script src="js/sac.js"></script>
+<script src="js/price.js"></script>
+<script src="js/sac.js"></script>
 
 
 <script>

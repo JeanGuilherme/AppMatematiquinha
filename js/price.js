@@ -75,35 +75,35 @@ $('#calcular').click(function (e) {
 	{
 		var ind = parseFloat(1+ValorI());
 		var res = parseFloat(ValorP()*(((Math.pow(ind,ValorN()))*ValorI())/((Math.pow(ind,ValorN()))-1))).toFixed(2);
-		$('#PRICEvalorparcela').val(res);
+		$('#PRICEvalorparcela').html(res);
 		return res;
 	}
 
 	function SaldoDevedorT()
 	{
 		var res = parseFloat(ValorParcela()*FVANMT()).toFixed(2);
-		$('#PRICEsaldodevedort').val(res);
+		$('#PRICEsaldodevedort').html(res);
 		return res;
 	}
 
 	function SaldoDevedorTmenosum()
 	{
 		var res = parseFloat(ValorParcela()*FVANMTMUM()).toFixed(2);
-		$('#PRICEsaldodevedort1').val(res);
+		$('#PRICEsaldodevedort1').html(res);
 		return res;
 	}
 
 	function JurosdeOrdemT()
 	{
 		var res = parseFloat(ValorI()*SaldoDevedorTmenosum()).toFixed(2);
-		$('#PRICEjurosordemt').val(res);
+		$('#PRICEjurosordemt').html(res);
 		return res;
 	}
 
 	function PrimeiraAmortizacao()
 	{
 		var res = (ValorParcela()-(ValorI()*ValorP())).toFixed(2);
-		$('#PRICEprimeiraamortizacao').val(res);
+		$('#PRICEprimeiraamortizacao').html(res);
 		return res;
 	}
 
@@ -112,35 +112,35 @@ $('#calcular').click(function (e) {
 		var ind = (ValorI()+1);
 		var tempo = (ValorT()-1);
 		var res = (PrimeiraAmortizacao()*(Math.pow(ind,tempo))).toFixed(2);
-		$('#PRICEamortizacaot').val(res);
+		$('#PRICEamortizacaot').html(res);
 		return res;
 	}
 
 	function TotalAmortizacao()
 	{
 		var res = parseFloat((FVA()-FVANMT())*ValorParcela()).toFixed(2);
-		$('#PRICEamortizacaott').val(res);
+		$('#PRICEamortizacaott').html(res);
 		return res;	
 	}
 
 	function AmortizacaoEmTK()
 	{
 		var res = parseFloat(ValorParcela()*(FVANMT()-FVANMTMUMK())).toFixed(2);	
-		$('#PRICEamortizacaott2').val(res);
+		$('#PRICEamortizacaott2').html(res);
 		return res;
 	}
 
 	function JurosAcumulado()
 	{
 		var res = parseFloat(((ValorT()-FVA())+FVANMT())*ValorParcela()).toFixed(2);
-		$('#PRICEjurosacum').val(res);
+		$('#PRICEjurosacum').html(res);
 		return res;
 	}
 
 	function JurosAcumuladoEmTK()
 	{	
 		var res = parseFloat((ValorParcela()*ValorK())-AmortizacaoEmTK()).toFixed(2);
-		$('#PRICEjurosacum2').val(res);
+		$('#PRICEjurosacum2').html(res);
 		return res;
 	}
 
