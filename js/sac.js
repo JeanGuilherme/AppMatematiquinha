@@ -13,7 +13,7 @@ $('#calcular').click(function (e) {
 	periodo = $('#periodo').val();
 	periodok = $('#periodok').val();
 	calcular(oper);
-
+	
 	function valorK()
 	{
 		return parseFloat(parseFloat(periodok)-parseFloat(periodo));

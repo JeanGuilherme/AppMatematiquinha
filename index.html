@@ -39,24 +39,22 @@
         </select>
         
       </div>
-      <div> 
+    </div> 
 
-      </select>
-    </div>
+    <dir class="row">
+      <div class="small-12">
+        <a id="calcular" name="calcular" value="Calcular" class="button" >Calcular</a>
+        <input type="reset" value="Reset" class="button">
+      </div>
+    </dir>
+  </form>
+  <div style="display: none;">
+    <a id="priceModal" href="" data-reveal-id="price"></a>
+    <a id="sacModal" href="" data-reveal-id="sac"></a>
   </div>
-  <dir class="row">
-    <div class="small-12">
-      <input type="button" id="calcular" name="calcular" value="Calcular" class="button">
-      <input type="reset" value="Reset" class="button">
-    </div>
-  </dir>
-</form>
-
-<div id="resultadoSac" class="row">
-  <div class="small-12 medium-12 columns">
-  <h2>Price</h2>
-  <hr>
-    <h3>Resultados Price</h3>
+  <div id="price" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h1>Price</h1>
+    <p class="lead">Resultados</p>
     <label><b>Valor da Parcela :</b><br><span id="PRICEvalorparcela">34</span></label>
     <label><b>Saldo Devedor de Ordem T :</b><br><span id="PRICEsaldodevedort">34</span></label>
     <label><b>Saldo Devedor de Ordem T - 1 :</b><br><span id="PRICEsaldodevedort1">34</span></label>
@@ -67,17 +65,12 @@
     <label><b>Amortização entre o periodo T e T+K :</b><br><span id="PRICEamortizacaott2">34</span></label>
     <label><b>Juros acumulado até o periodo T :</b><br><span id="PRICEjurosacum">34</span></label>
     <label><b>Juros acumulado entre o periodo T e T+K  :</b><br><span id="PRICEjurosacum2">34</span></label>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
-</div>
 
-
-  
-
-<div id="resultadoPRICE" class="row">
-  <div class="small-12 medium-12 columns">
-  <h2>SAccc</h2>
-  <hr>
-    <h3>Resultados SAC</h3>
+  <div id="sac" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h1>SAC</h1>
+    <p class="lead">Resultados</p>
     <label><b>Valor da Amortização :</b><br><span id="SACvaloramortizacao">34</span></label>
     <label><b>Valor Saldo Devedor De Ordem T :</b><br><span id="SACsaldodevedort">34</span></label>
     <label><b>Valor Saldo Devedor De Ordem T - 1:</b><br><span id="SACsaldodevedortum">34</span></label>
@@ -89,22 +82,18 @@
     <label><b>Soma Das Prestações Acumuladas De Ordem T:</b><br><span id="SACsomaprestacaoa">34</span></label>
     <label><b>Soma Das Prestações De Ordem T+K:</b><br><span id="SACsomaprestacaotk">34</span></label>
     <label><b>Decréscimo Nas Prestações:</b><br><span id="SACdecrescimo">34</span></label>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
-</div>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/price.js"></script>
+  <script src="js/sac.js"></script>
+  <script src="js/init.js"></script>
 
 
 
-
-
-
-<script src="js/vendor/jquery.js"></script>
-<script src="js/foundation.min.js"></script>
-<script src="js/price.js"></script>
-<script src="js/sac.js"></script>
-
-
-<script>
-  $(document).foundation();
-</script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
