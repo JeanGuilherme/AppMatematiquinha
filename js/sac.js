@@ -7,13 +7,13 @@ var periodok = "";
 $('#calcular').click(function (e) {
 	e.preventDefault();
 	var oper = $('#oper').val();
-	calcular(oper);
 	capital = $('#capital').val();
 	taxa = $('#taxa').val();
 	parcelas = $('#parcelas').val();
 	periodo = $('#periodo').val();
 	periodok = $('#periodok').val();
-
+	calcular(oper);
+	
 	function valorK()
 	{
 		return parseFloat(parseFloat(periodok)-parseFloat(periodo));
